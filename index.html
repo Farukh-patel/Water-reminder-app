@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Reminder 💦</title>
+    <meta name="description" content="Stay hydrated with hourly water reminders">
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192x192.png">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💦 Water Reminder</h1>
+            <p>Stay hydrated, stay healthy!</p>
+        </header>
+
+        <main>
+            <div class="status-card">
+                <div class="water-drop">💧</div>
+                <h2 id="status">Ready to start!</h2>
+                <p id="next-reminder">Click start to begin hourly reminders</p>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">Start Reminders</button>
+                <button id="stopBtn" class="btn btn-secondary" disabled>Stop Reminders</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="remindersSent">0</span>
+                    <span class="stat-label">Reminders Sent</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="glassesDrunk">0</span>
+                    <span class="stat-label">Glasses Drunk</span>
+                </div>
+            </div>
+
+            <div class="water-tracker">
+                <h3>Today's Progress</h3>
+                <div class="glasses-container">
+                    <div class="glass" data-filled="false">🥤</div>
+                    <div class="glass" data-filled="false">🥤</div>
+                    <div class="glass" data-filled="false">🥤</div>
+                    <div class="glass" data-filled="false">🥤</div>
+                    <div class="glass" data-filled="false">🥤</div>
+                    <div class="glass" data-filled="false">🥤</div>
+                    <div class="glass" data-filled="false">🥤</div>
+                    <div class="glass" data-filled="false">🥤</div>
+                </div>
+                <button id="addGlassBtn" class="btn btn-small">Add Glass</button>
+            </div>
+
+            <div class="settings">
+                <h3>Settings</h3>
+                <div class="setting-item">
+                    <label for="reminderInterval">Reminder Interval:</label>
+                    <select id="reminderInterval">
+                        <option value="30">30 minutes</option>
+                        <option value="60" selected>1 hour</option>
+                        <option value="90">1.5 hours</option>
+                        <option value="120">2 hours</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="dailyGoal">Daily Goal (glasses):</label>
+                    <input type="number" id="dailyGoal" value="8" min="1" max="20">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>💧 Stay hydrated, stay healthy! 💧</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
